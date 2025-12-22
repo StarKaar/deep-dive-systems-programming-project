@@ -21,10 +21,7 @@ graph TD
 **Kaatrix** is a custom Unix-style shell developed in C++ that explores the fundamental relationship between user-space applications and the OS kernel. By implementing core features such as process management, I/O redirection, and interactive terminal control, Kaatrix demonstrates the intricate mechanics of command parsing and execution. A primary focus of development was cross-platform compatibility, specifically adapting POSIX standards to Windows via the MSYS2 abstraction layer.
 
 ## 2. Architecture Overview
-![Kaatrix Shell Demo](assets/screenshot.png)
 Kaatrix operates as a bridge between the user and the Kernel. When a command is entered, the shell forks a child process to maintain the stability of the parent shell.
-
-![Process Logic](https://upload.wikimedia.org/wikipedia/commons/a/af/Process_flow_chart.png)
 
 1. **Read:** Captures raw input using a non-canonical terminal mode.
 2. **Parse:** Lexical analysis to handle quotes and escapes.
