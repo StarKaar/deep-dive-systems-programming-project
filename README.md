@@ -11,13 +11,6 @@
 ---
 
 ## 1. Abstract
-graph TD
-    A[User Input] --> B{Is it Built-in?}
-    B -- Yes --> C[Execute in Parent Process]
-    B -- No --> D[fork child process]
-    D --> E[execvp command]
-    E --> F[waitpid in Parent]
-    F --> A
 **Kaatrix** is a custom Unix-style shell developed in C++ that explores the fundamental relationship between user-space applications and the OS kernel. By implementing core features such as process management, I/O redirection, and interactive terminal control, Kaatrix demonstrates the intricate mechanics of command parsing and execution. A primary focus of development was cross-platform compatibility, specifically adapting POSIX standards to Windows via the MSYS2 abstraction layer.
 
 ## 2. Architecture Overview
